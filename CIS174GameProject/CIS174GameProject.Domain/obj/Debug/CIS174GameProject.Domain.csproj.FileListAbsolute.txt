@@ -1,0 +1,14 @@
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\CIS174GameProject.Domain.dll.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\CIS174GameProject.Domain.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\CIS174GameProject.Domain.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\EntityFramework.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\EntityFramework.SqlServer.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\EntityFramework.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\EntityFramework.SqlServer.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csprojAssemblyReference.cache
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csproj.CoreCompileInputs.cache
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csproj.CopyComplete
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.Migrations.InitialDatabaseCreation.resources
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csproj.GenerateResource.cache

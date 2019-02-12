@@ -1,0 +1,242 @@
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.dll.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.exe
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.exe.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.rsp
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.exe
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.exe.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.rsp
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CSharp.Core.targets
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.Managed.Core.targets
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.AppContext.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Collections.Immutable.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Console.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Compression.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.FileSystem.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Pipes.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Reflection.Metadata.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.AccessControl.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Claims.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Principal.Windows.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.ValueTuple.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.ReaderWriter.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XmlDocument.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XPath.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.exe
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.exe.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.rsp
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\VBCSCompiler.exe
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\roslyn\VBCSCompiler.exe.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Antlr3.Runtime.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\EntityFramework.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\EntityFramework.SqlServer.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Core.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Owin.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Cookies.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Facebook.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Google.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.OAuth.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Twitter.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Web.Infrastructure.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Newtonsoft.Json.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Owin.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Diagnostics.DiagnosticSource.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Net.Http.Formatting.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Helpers.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.WebHost.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Mvc.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Optimization.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Razor.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Deployment.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Razor.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\WebGrease.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Helpers.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Mvc.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Optimization.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Razor.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Deployment.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Razor.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Newtonsoft.Json.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Antlr3.Runtime.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Net.Http.Formatting.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.WebHost.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\EntityFramework.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\EntityFramework.SqlServer.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Core.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Owin.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Facebook.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Cookies.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Google.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Twitter.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.OAuth.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\System.Diagnostics.DiagnosticSource.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csprojAssemblyReference.cache
+B:\Ben\School\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csproj.CoreCompileInputs.cache
+B:\Ben\School\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csproj.CopyComplete
+B:\Ben\School\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.dll.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.exe
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.exe.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csc.rsp
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.exe
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.exe.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\csi.rsp
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.CSharp.Core.targets
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.Managed.Core.targets
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.AppContext.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Collections.Immutable.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Console.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Compression.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.FileSystem.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.IO.Pipes.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Reflection.Metadata.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.AccessControl.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Claims.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Security.Principal.Windows.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.ValueTuple.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.ReaderWriter.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XmlDocument.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XPath.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.exe
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.exe.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\vbc.rsp
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\VBCSCompiler.exe
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\roslyn\VBCSCompiler.exe.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Antlr3.Runtime.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\EntityFramework.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\EntityFramework.SqlServer.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Core.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Owin.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Cookies.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Facebook.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Google.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.OAuth.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Twitter.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Web.Infrastructure.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Newtonsoft.Json.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Owin.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Diagnostics.DiagnosticSource.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Net.Http.Formatting.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Helpers.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.WebHost.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Mvc.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Optimization.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Razor.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Deployment.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Razor.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\WebGrease.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Shared.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Helpers.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Mvc.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Optimization.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Razor.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Deployment.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.WebPages.Razor.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Newtonsoft.Json.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Antlr3.Runtime.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Net.Http.Formatting.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Web.Http.WebHost.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\EntityFramework.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\EntityFramework.SqlServer.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Core.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.Owin.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Facebook.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Cookies.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Google.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.Twitter.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.Owin.Security.OAuth.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\System.Diagnostics.DiagnosticSource.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\CIS174GameProject.Domain.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csprojAssemblyReference.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csproj.CoreCompileInputs.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.Web.csproj.CopyComplete
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Debug\CIS174GameProject.pdb

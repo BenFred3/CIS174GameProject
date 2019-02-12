@@ -1,0 +1,30 @@
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.dll.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.SqlServer.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.SqlServer.xml
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csproj.CoreCompileInputs.cache
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csproj.CopyComplete
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.dll
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.pdb
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.dll.config
+B:\Ben\School\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csprojAssemblyReference.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Shared.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.SqlServer.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\CIS174GameProject.Domain.dll.config
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Debug\EntityFramework.SqlServer.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csprojAssemblyReference.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csproj.CoreCompileInputs.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.csproj.CopyComplete
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Debug\CIS174GameProject.Shared.pdb
