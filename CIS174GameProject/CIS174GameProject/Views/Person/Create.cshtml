@@ -1,0 +1,54 @@
+﻿@model CIS174GameProject.Models.CreatePersonModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/DMACC/profile.js" type="text/javascript"></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <h2>Update Profile</h2>
+    <div>
+        <form action="@Url.Action("Index","Home")">
+            <div class="col-sm-5">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+            <div class="col-sm-8">
+                @Html.EditorFor(model => model.FirstName)
+            </div>
+            <br />
+            <div class="col-sm-5">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="col-sm-8">
+                @Html.EditorFor(model => model.LastName)
+            </div>
+            <br />
+            <div class="col-sm-5">
+                @Html.LabelFor(model => model.Gender)
+            </div>
+            <div class="col-sm-8">
+                @Html.EditorFor(model => model.Gender)
+            </div>
+            <br />
+            <div class="col-sm-5">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="col-sm-8">
+                @Html.EditorFor(model => model.Email)
+            </div>
+            <br />
+            <div class="col-sm-5">
+                @Html.LabelFor(model => model.PhoneNumber)
+            </div>
+            <div class="col-sm-8">
+                @Html.EditorFor(model => model.PhoneNumber)
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <div class="col-sm-5">
+                <button class="btn btn-secondary" type="submit">Save</button>
+            </div>
+            <br />
+        </form>
+    </div>
+</body>
+</html>

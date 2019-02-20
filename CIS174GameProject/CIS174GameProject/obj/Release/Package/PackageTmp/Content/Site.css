@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.margin-top-md {
+    margin-top: 10px;
+}
+
+.margin-left-md {
+    margin-left: 15px;
+}
+
+.hidden {
+    display: none;
+}

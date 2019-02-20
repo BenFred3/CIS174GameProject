@@ -1,0 +1,24 @@
+﻿@model CIS174GameProject.Models.UpdatePersonModel
+<script src="~/Scripts/DMACC/profile.js" type="text/javascript"></script>
+<h2>Profile Page</h2>
+<input id="userID" value="userId" type="hidden" onload=searchPeople() />
+<br />
+<script>
+    searchPeople();
+</script>
+<div id="CreateProfile" class="hidden">
+    <p> You haven't set up your profile before. Click here to do so! </p>
+    @Html.ActionLink("[Create your profile]", "Create")
+</div>
+<div id="Form" class="hidden">
+    <input id="personId" type="hidden">
+    <form name="personForm" onsubmit="updatePerson()">
+        <p>First Name: <input id="firstName" type="text" required></p>
+        <p>Last Name: <input id="lastName" type="text" required></p>
+        <p>Gender: (0 - Male, 1 - Female, 2 - Other) <input id="gender" type="range" name="gender" min="0" max="2" step="1"></p>
+        <p>Date Created: <input id="dateCreated" type="datetime" readonly></p>
+        <p>Email: <input id="email" type="email" required></p>
+        <p>Phone Number: <input id="phoneNumber" type="text"></p>
+        <input type="submit" value="Save">
+    </form>
+</div>

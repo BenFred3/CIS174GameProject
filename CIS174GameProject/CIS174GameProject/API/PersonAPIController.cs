@@ -1,6 +1,7 @@
 ﻿using CIS174GameProject.Shared.Orchestrators;
 using CIS174GameProject.Shared.ViewModels;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace CIS174GameProject.API
@@ -16,7 +17,7 @@ namespace CIS174GameProject.API
         }
 
         [HttpGet]
-        public List<PersonViewModel> GetAllPeople()
+        public Task<List<PersonViewModel>> GetAllPeople()
         {
             var people = _personOrchestrator.GetAllPeople();
 

@@ -1,6 +1,7 @@
 namespace CIS174GameProject.Domain.Migrations
 {
     using CIS174GameProject.Domain.Entities;
+    using CIS174GameProject.Domain.Enums;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -19,14 +20,15 @@ namespace CIS174GameProject.Domain.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-
             context.People.AddOrUpdate(new Person
             {
                 PersonId = Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"),
                 FirstName = "Benjamin",
                 LastName = "Frederickson",
+                Gender = GenderEnum.Male,
                 DateCreated = DateTime.Now,
-                Email = "bfrederickson@dmacc.edu"
+                Email = "bfrederickson@dmacc.edu",
+                PhoneNumber = ""
             });
 
             context.People.AddOrUpdate(new Person
@@ -34,8 +36,10 @@ namespace CIS174GameProject.Domain.Migrations
                 PersonId = Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"),
                 FirstName = "Jared",
                 LastName = "Holliday",
+                Gender = GenderEnum.Male,
                 DateCreated = DateTime.Now,
-                Email = "jrholliday@dmacc.edu"
+                Email = "jrholliday@dmacc.edu",
+                PhoneNumber = ""
             });
 
             context.People.AddOrUpdate(new Person
@@ -43,8 +47,10 @@ namespace CIS174GameProject.Domain.Migrations
                 PersonId = Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"),
                 FirstName = "Ian",
                 LastName = "Tibe",
+                Gender = GenderEnum.Male,
                 DateCreated = DateTime.Now,
-                Email = "imtibe@dmacc.edu"
+                Email = "imtibe@dmacc.edu",
+                PhoneNumber = ""
             });
 
             context.Highscores.AddOrUpdate(new HighScore()

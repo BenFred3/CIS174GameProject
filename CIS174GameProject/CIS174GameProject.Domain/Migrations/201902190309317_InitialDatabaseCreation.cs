@@ -25,8 +25,10 @@ namespace CIS174GameProject.Domain.Migrations
                         PersonId = c.Guid(nullable: false),
                         FirstName = c.String(maxLength: 50),
                         LastName = c.String(maxLength: 50),
+                        Gender = c.Int(nullable: false),
                         DateCreated = c.DateTime(),
                         Email = c.String(maxLength: 100),
+                        PhoneNumber = c.String(maxLength: 16),
                     })
                 .PrimaryKey(t => t.PersonId);
             

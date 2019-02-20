@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIS174GameProject.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,12 @@ namespace CIS174GameProject.Shared.ViewModels
 {
     public class PersonViewModel
     {
-        public string PersonName { get; set; }
+        public Guid PersonId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public GenderEnum Gender { get; set; }
         public DateTime? DateCreated { get; set; }
         public string Email { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
