@@ -25,6 +25,67 @@
     });
 }
 
+function searchPeopleCreate()
+{
+    var search = $("#userID").val();
+
+    $.ajax({
+        url: "Search",
+        data: { searchGuid: search.toString() }
+    }).done(function (data) {
+        $("#personId").val(data.PersonId);
+        if (data.PersonId == "00000000-0000-0000-0000-000000000000")
+        {
+            $("#CreateForm").removeClass("hidden");
+        }
+        else {
+            $("#Success").removeClass("hidden");
+        }
+    });
+}
+
+function createPerson()
+{
+    var firstName = $("#firstName").val();
+    var lastName = $("#lastName").val();
+    var gender = $("#gender").val();
+    var email = $("#email").val();
+    var phoneNumber = $("#phoneNumber").val();
+
+    var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
+    if (phoneNumber != "")
+    {
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        if (phoneno.test(phoneNumber) == false)
+        {
+            alert("Please enter a valid phone number.");
+            return ("");
+        }
+    }
+
+    $.ajax({
+        url: "CreatePerson",
+        dataType: "json",
+        data: {
+            FirstName: firstName,
+            LastName: lastName,
+            Gender: gender,
+            Email: email,
+            PhoneNumber: phoneNumber
+        }
+    }).done(function (data) {
+        if (data)
+        {
+            alert("Success!");
+        }
+        else
+        {
+            alert("Failure to Create.");
+        }
+    });
+}
+
 function updatePerson()
 {
     var personId = $("#personId").val();
@@ -34,13 +95,15 @@ function updatePerson()
     var email = $("#email").val();
     var phoneNumber = $("#phoneNumber").val();
 
-    var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
-    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-
-    if (phoneno.test(phoneNumber) == false)
+    if (phoneNumber != "")
     {
-        alert("Please enter a valid phone number.");
-        return("");
+        var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        if (phoneno.test(phoneNumber) == false) {
+            alert("Please enter a valid phone number.");
+            return ("");
+        }
     }
 
     $.ajax({

@@ -20,6 +20,16 @@ namespace CIS174GameProject.Domain.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            context.Errors.AddOrUpdate(new Error
+            {
+                ErrorId = Guid.Parse("4b8836cb-d3e7-4b29-b391-515ba99505e2"),
+                ErrorDate = DateTime.Now,
+                ErrorMessage = "Example Error Message",
+                StackTrace = "Example Stack Trace",
+                InnerExceptions = "Example Inner Exceptions"
+            });
+
             context.People.AddOrUpdate(new Person
             {
                 PersonId = Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"),

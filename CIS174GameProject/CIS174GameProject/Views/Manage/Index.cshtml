@@ -16,6 +16,11 @@
             @Html.ActionLink("Go to your profile", "Update", new { controller = "Person", action = "Index", id = UrlParameter.Optional }, null)
             ]
         </dd>
+        <dd>
+            [
+            @Html.ActionLink("Cause a Error", "ErrorGenerator", new { controller = "Error", action = "Index", id = UrlParameter.Optional }, null)
+            ]
+        </dd>
         <dt>Password:</dt>
         <dd>
             [

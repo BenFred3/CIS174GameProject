@@ -7,5 +7,6 @@ namespace CIS174GameProject.Domain
     {
         public DbSet<HighScore> Highscores { get; set; }
         public DbSet<Person> People { get; set; }
+        public DbSet<Error> Errors { get; set; }
     }
 }

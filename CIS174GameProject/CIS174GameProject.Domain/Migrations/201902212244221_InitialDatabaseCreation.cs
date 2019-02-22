@@ -8,6 +8,18 @@ namespace CIS174GameProject.Domain.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        ErrorId = c.Guid(nullable: false),
+                        ErrorDate = c.DateTime(),
+                        ErrorMessage = c.String(),
+                        StackTrace = c.String(),
+                        InnerExceptions = c.String(),
+                    })
+                .PrimaryKey(t => t.ErrorId);
+            
+            CreateTable(
                 "dbo.HighScores",
                 c => new
                     {
@@ -38,6 +50,7 @@ namespace CIS174GameProject.Domain.Migrations
         {
             DropTable("dbo.People");
             DropTable("dbo.HighScores");
+            DropTable("dbo.Errors");
         }
     }
 }

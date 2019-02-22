@@ -49,10 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Orchestrators\ErrorOrchestrator.cs" />
     <Compile Include="Orchestrators\HighScoreOrchestrator.cs" />
     <Compile Include="Orchestrators\PersonOrchestrator.cs" />
     <Compile Include="Orchestrators\ProjectMembersOrchestrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ErrorViewModel.cs" />
     <Compile Include="ViewModels\HighScoreViewModel.cs" />
     <Compile Include="ViewModels\PersonViewModel.cs" />
     <Compile Include="ViewModels\ProjectMembersViewModel.cs" />

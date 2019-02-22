@@ -13,7 +13,7 @@ namespace CIS174GameProject.Domain.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201902190309317_InitialDatabaseCreation"; }
+            get { return "201902212244221_InitialDatabaseCreation"; }
         }
         
         string IMigrationMetadata.Source

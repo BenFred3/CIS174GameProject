@@ -48,12 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Error.cs" />
     <Compile Include="Entities\HighScore.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Enums\GenderEnum.cs" />
-    <Compile Include="Migrations\201902190309317_InitialDatabaseCreation.cs" />
-    <Compile Include="Migrations\201902190309317_InitialDatabaseCreation.Designer.cs">
-      <DependentUpon>201902190309317_InitialDatabaseCreation.cs</DependentUpon>
+    <Compile Include="Migrations\201902212244221_InitialDatabaseCreation.cs" />
+    <Compile Include="Migrations\201902212244221_InitialDatabaseCreation.Designer.cs">
+      <DependentUpon>201902212244221_InitialDatabaseCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProjectContext.cs" />
@@ -64,8 +65,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902190309317_InitialDatabaseCreation.resx">
-      <DependentUpon>201902190309317_InitialDatabaseCreation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902212244221_InitialDatabaseCreation.resx">
+      <DependentUpon>201902212244221_InitialDatabaseCreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

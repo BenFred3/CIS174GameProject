@@ -17,14 +17,14 @@ namespace CIS174GameProject.Controllers
             return View();
         }
 
-        public async Task<ActionResult> Create(CreatePersonModel person)
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        public async Task<ActionResult> CreatePerson(CreatePersonModel person)
         {
             string userId = Session["userId"].ToString();
-
-            if (string.IsNullOrWhiteSpace(person.FirstName))
-            {
-                return View();
-            }
 
             var updatedCount = await _personOrchestrator.CreatePerson(new PersonViewModel
             {
@@ -37,7 +37,7 @@ namespace CIS174GameProject.Controllers
                 PhoneNumber = person.PhoneNumber
             });
 
-            return View();
+            return Json(updatedCount, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Update()
@@ -47,7 +47,6 @@ namespace CIS174GameProject.Controllers
 
         public async Task<JsonResult> UpdatePerson(UpdatePersonModel person)
         {
-
             if (person.PersonId == Guid.Empty)
             {
                 return Json(false, JsonRequestBehavior.AllowGet);
