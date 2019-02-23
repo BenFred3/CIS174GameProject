@@ -1,6 +1,5 @@
 ﻿@{
     ViewBag.Title = "ErrorGenerator";
 }
-<script src="~/Scripts/DMACC/error.js" type="text/javascript"></script>
 <h2>Error Generator</h2>
-<button onclick="generateError()">Generate Error</button>
+<button onclick="location.href= '@Url.Action("CauseError","Error")'">Generate Error</button>

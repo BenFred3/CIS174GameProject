@@ -29,9 +29,32 @@ namespace CIS174GameProject.Shared.Orchestrators
             return await _projectContext.SaveChangesAsync();
         }
 
-        public void CauseError()
+        public async Task<ErrorViewModel> CauseError()
         {
-            throw new OutOfMemoryException();
+            try
+            {
+                throw new OutOfMemoryException();
+            }
+            catch (OutOfMemoryException ex)
+            {
+                ErrorViewModel errorViewModel = new ErrorViewModel();
+
+                errorViewModel.ErrorId = Guid.NewGuid();
+                errorViewModel.ErrorDate = DateTime.Now;
+                errorViewModel.StackTrace = ex.StackTrace;
+                errorViewModel.ErrorMessage = ex.Message;
+                if (ex.InnerException is null)
+                {
+                    errorViewModel.InnerExceptions = "None";
+                }
+                else
+                { 
+                    errorViewModel.InnerExceptions = ex.InnerException.ToString();
+                }
+                await CreateErrorLog(errorViewModel);
+
+                return (errorViewModel);
+            }
         }
     }
 }

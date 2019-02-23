@@ -46,9 +46,10 @@ namespace CIS174GameProject.Controllers
             return Json(createdErrorLog, JsonRequestBehavior.AllowGet);
         }
 
-        public void CauseError()
+        public async Task<ActionResult> CauseError()
         {
-            _errorOrchestrator.CauseError();
+            ErrorViewModel errorViewModel = await _errorOrchestrator.CauseError();
+            return View("Error");
         }
     }
 }
