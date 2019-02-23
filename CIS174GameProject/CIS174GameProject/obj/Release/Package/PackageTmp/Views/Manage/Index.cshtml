@@ -10,18 +10,19 @@
     <h4>Change your account settings</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Profile:</dt>
+        <dt>Profile: </dt>
         <dd>
             [
             @Html.ActionLink("Go to your profile", "Update", new { controller = "Person", action = "Index", id = UrlParameter.Optional }, null)
             ]
         </dd>
+        <dt>Error Generator: </dt>
         <dd>
             [
             @Html.ActionLink("Cause a Error", "ErrorGenerator", new { controller = "Error", action = "Index", id = UrlParameter.Optional }, null)
             ]
         </dd>
-        <dt>Password:</dt>
+        <dt>Password: </dt>
         <dd>
             [
             @if (Model.HasPassword)
