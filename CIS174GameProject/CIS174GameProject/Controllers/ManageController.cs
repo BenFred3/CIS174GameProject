@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using CIS174GameProject.Models;
+using CIS174GameProject.Shared.ViewModels;
+using CIS174GameProject.Shared.Orchestrators;
 
 namespace CIS174GameProject.Controllers
 {
@@ -335,7 +337,32 @@ namespace CIS174GameProject.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        protected override async void OnException(ExceptionContext ex)
+        {
+            ex.ExceptionHandled = true;
+
+            ErrorOrchestrator eo = new ErrorOrchestrator();
+            ErrorViewModel errorViewModel = new ErrorViewModel
+            {
+                ErrorId = Guid.NewGuid(),
+                ErrorDate = DateTime.Now,
+                StackTrace = ex.Exception.StackTrace,
+                ErrorMessage = ex.Exception.Message
+            };
+            if (ex.Exception.InnerException is null)
+            {
+                errorViewModel.InnerExceptions = "None";
+            }
+            else
+            {
+                errorViewModel.InnerExceptions = ex.Exception.InnerException.ToString();
+            }
+            await eo.CreateErrorLog(errorViewModel);
+
+            ex.Result = RedirectToAction("Error", "Error");
+        }
+
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

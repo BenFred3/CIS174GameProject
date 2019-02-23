@@ -38,14 +38,15 @@ namespace CIS174GameProject
         public async Task LogError(Exception ex)
         {
             ErrorOrchestrator eo = new ErrorOrchestrator();
-            ErrorViewModel newErrorViewModel = new ErrorViewModel();
+            ErrorViewModel errorViewModel = new ErrorViewModel
+            {
+                ErrorId = Guid.NewGuid(),
+                ErrorDate = DateTime.Now,
+                StackTrace = ex.StackTrace,
+                ErrorMessage = ex.Message
+            };
 
-            newErrorViewModel.ErrorId = Guid.NewGuid();
-            newErrorViewModel.ErrorDate = DateTime.Now;
-            newErrorViewModel.StackTrace = ex.StackTrace;
-            newErrorViewModel.ErrorMessage = ex.Message;
-
-            await eo.CreateErrorLog(newErrorViewModel);
+            await eo.CreateErrorLog(errorViewModel);
         }
     }
 }

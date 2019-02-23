@@ -64,6 +64,30 @@ function createPerson()
         }
     }
 
+    if (firstName.length > 50)
+    {
+        alert("Please enter in a first name that is less than 50 characters.");
+        return ("");
+    }
+
+    if (lastName.length > 50)
+    {
+        alert("Please enter in a last name that is less than 50 characters.");
+        return ("");
+    }
+
+    if (email.length > 100)
+    {
+        alert("Please enter in a email that is less than 100 characters.");
+        return ("");
+    }
+
+    if (gender < 0 || gender > 2)
+    {
+        alert("Please stop messing with the slider.");
+        return ("");
+    }
+
     $.ajax({
         url: "CreatePerson",
         dataType: "json",
@@ -100,10 +124,35 @@ function updatePerson()
         var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
         var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-        if (phoneno.test(phoneNumber) == false) {
+        if (phoneno.test(phoneNumber) == false)
+        {
             alert("Please enter a valid phone number.");
             return ("");
         }
+    }
+
+    if (firstName.length > 50)
+    {
+        alert("Please enter in a first name that is less than 50 characters.");
+        return ("");
+    }
+
+    if (lastName.length > 50)
+    {
+        alert("Please enter in a last name that is less than 50 characters.");
+        return ("");
+    }
+
+    if (email.length > 100)
+    {
+        alert("Please enter in a email that is less than 100 characters.");
+        return ("");
+    }
+
+    if (gender < 0 || gender > 2)
+    {
+        alert("Please stop messing with the slider.");
+        return ("");
     }
 
     $.ajax({
