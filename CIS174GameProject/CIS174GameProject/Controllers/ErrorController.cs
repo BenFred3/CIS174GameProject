@@ -1,12 +1,16 @@
-﻿using CIS174GameProject.Models;
+﻿using CIS174GameProject.Domain;
+using CIS174GameProject.Domain.Entities;
+using CIS174GameProject.Models;
 using CIS174GameProject.Shared.Orchestrators;
 using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
+
 namespace CIS174GameProject.Controllers
 {
+    [ExceptionHandler]
     public class ErrorController : Controller
     {
         private ErrorOrchestrator _errorOrchestrator = new ErrorOrchestrator();
@@ -46,35 +50,48 @@ namespace CIS174GameProject.Controllers
             return Json(createdErrorLog, JsonRequestBehavior.AllowGet);
         }
 
-        public async Task<ActionResult> CauseError()
+        public void CauseError()
         {
-            ErrorViewModel errorViewModel = await _errorOrchestrator.CauseError();
-            return View("Error");
+            _errorOrchestrator.CauseError();
         }
+    }
 
-        protected override async void OnException(ExceptionContext ex)
+    public class ExceptionHandlerAttribute : FilterAttribute, IExceptionFilter
+    {
+        public void OnException(ExceptionContext filterContext)
         {
-            ex.ExceptionHandled = true;
+            string innerEx = "";
 
-            ErrorOrchestrator eo = new ErrorOrchestrator();
-            ErrorViewModel errorViewModel = new ErrorViewModel
+            if (filterContext.Exception.InnerException is null)
             {
-                ErrorId = Guid.NewGuid(),
-                ErrorDate = DateTime.Now,
-                StackTrace = ex.Exception.StackTrace,
-                ErrorMessage = ex.Exception.Message
-            };
-            if (ex.Exception.InnerException is null)
-            {
-                errorViewModel.InnerExceptions = "None";
+                innerEx = "None";
             }
             else
             {
-                errorViewModel.InnerExceptions = ex.Exception.InnerException.ToString();
+                innerEx = filterContext.Exception.InnerException.ToString();
             }
-            await eo.CreateErrorLog(errorViewModel);
 
-            ex.Result = RedirectToAction("Error", "Error");
+            if (!filterContext.ExceptionHandled)
+            {
+                Error logger = new Error();
+
+                logger = new Error()
+                {
+                    ErrorMessage = filterContext.Exception.Message,
+                    StackTrace = filterContext.Exception.StackTrace,
+                    ErrorDate = DateTime.Now,
+                    ErrorId = Guid.NewGuid(),
+                    InnerExceptions = innerEx
+                };
+
+                ProjectContext pc = new ProjectContext();
+                pc.Errors.Add(logger);
+                pc.SaveChanges();
+
+                filterContext.ExceptionHandled = true;
+
+                filterContext.Result = new ViewResult { ViewName = "Error" };
+            }
         }
     }
 }

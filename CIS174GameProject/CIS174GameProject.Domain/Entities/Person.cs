@@ -1,5 +1,4 @@
-﻿using CIS174GameProject.Domain.Enums;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace CIS174GameProject.Domain.Entities
@@ -14,7 +13,7 @@ namespace CIS174GameProject.Domain.Entities
         [StringLength(50)]
         public string LastName { get; set; }
 
-        public GenderEnum Gender { get; set; }
+        public int Gender { get; set; }
 
         public DateTime? DateCreated { get; set; }
 

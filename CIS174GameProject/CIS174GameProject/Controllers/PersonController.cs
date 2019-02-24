@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace CIS174GameProject.Controllers
 {
+    [ExceptionHandler]
     public class PersonController : Controller
     {
         private PersonOrchestrator _personOrchestrator = new PersonOrchestrator();
@@ -80,7 +81,7 @@ namespace CIS174GameProject.Controllers
             return Json(viewModel, JsonRequestBehavior.AllowGet);
         }
 
-        protected override async void OnException(ExceptionContext ex)
+        protected async void OnExceptionAsync(ExceptionContext ex)
         {
             ex.ExceptionHandled = true;
 

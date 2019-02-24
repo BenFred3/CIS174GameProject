@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using CIS174GameProject.Shared.ViewModels;
 using System.Threading.Tasks;
+using CIS174GameProject.Controllers;
 
 namespace CIS174GameProject
 {
@@ -23,30 +24,19 @@ namespace CIS174GameProject
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        async void Application_Error(object sender, EventArgs e)
+        protected void Application_Error(object sender, EventArgs e)
         {
-            Exception ex = Server.GetLastError();
+            var lastError = Server.GetLastError();
+            var code = (lastError is HttpException) ? (lastError as HttpException).GetHttpCode() : 500;
 
-            if (ex != null)
+            if (code == 404)
             {
-                await LogError(ex);
-
-                Server.Transfer("~/Error/Error", true);
+                Response.Redirect("/Error/NotFound");
             }
-        }
-
-        public async Task LogError(Exception ex)
-        {
-            ErrorOrchestrator eo = new ErrorOrchestrator();
-            ErrorViewModel errorViewModel = new ErrorViewModel
+            else
             {
-                ErrorId = Guid.NewGuid(),
-                ErrorDate = DateTime.Now,
-                StackTrace = ex.StackTrace,
-                ErrorMessage = ex.Message
-            };
-
-            await eo.CreateErrorLog(errorViewModel);
+                Response.Redirect("/Error/Error");
+            }
         }
     }
 }

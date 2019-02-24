@@ -1,4 +1,5 @@
 ﻿using CIS174GameProject.Domain;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators
 {
-    public class ProjectMembersOrchestrator
+    public class ProjectMembersOrchestrator : IProjectMembersOrchestrator
     {
         private readonly ProjectContext _projectContext;
 
@@ -17,15 +18,37 @@ namespace CIS174GameProject.Shared.Orchestrators
             _projectContext = new ProjectContext();
         }
 
-        public string GetAllProjectMembers()
+        public List<ProjectMembersViewModel> GetAllProjectMembers()
         {
-            string projectMembers;
+            var Ben = new ProjectMembersViewModel
+            {
+                Name = "Ben Frederickson",
+                Email = "bfrederickson@dmacc.edu",
+                Role = "Work Flow Manager"
+            };
 
-            projectMembers = "Name: Benjamin Frederickson\nEmail: bfrederickson @dmacc.edu\nRole: Work-flow Manager, Programmer"
-                + " Name: Jared Holliday\nEmail: jrholliday @dmacc.edu\nRole: Repo Manager, Programmer"
-                + " Name: Ian Tibe\nEmail: imtibe @dmacc.edu\nRole: Test Builds / Managing Unity, Programmer";
+            var Jared = new ProjectMembersViewModel
+            {
+                Name = "Jared Holliday",
+                Email = "jrholliday@dmacc.edu",
+                Role = "Repo Master"
+            };
 
-            return projectMembers;
+            var Ian = new ProjectMembersViewModel
+            {
+                Name = "Ian Tibe",
+                Email = "imtibe@dmacc.edu",
+                Role = "Unity Manager / Tester"
+            };
+
+            List<ProjectMembersViewModel> members = new List<ProjectMembersViewModel>()
+            {
+                Jared,
+                Ben,
+                Ian
+            };
+
+            return members;
         }
     }
 }

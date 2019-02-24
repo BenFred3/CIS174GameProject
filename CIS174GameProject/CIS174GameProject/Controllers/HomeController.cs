@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace CIS174GameProject.Controllers
 {
+    [ExceptionHandler]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -20,7 +21,7 @@ namespace CIS174GameProject.Controllers
             return View();
         }
 
-        protected override async void OnException(ExceptionContext ex)
+        protected async void OnExceptionAsync(ExceptionContext ex)
         {
             ex.ExceptionHandled = true;
 

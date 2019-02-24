@@ -1,9 +1,6 @@
-﻿using CIS174GameProject.Domain.Enums;
+﻿using CIS174GameProject.Shared.Enums;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace CIS174GameProject.Models
 {

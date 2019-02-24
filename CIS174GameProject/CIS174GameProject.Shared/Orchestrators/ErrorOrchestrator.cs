@@ -1,12 +1,13 @@
 ﻿using CIS174GameProject.Domain;
 using CIS174GameProject.Domain.Entities;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators
 {
-    public class ErrorOrchestrator 
+    public class ErrorOrchestrator : IErrorOrchestrator
     {
         private readonly ProjectContext _projectContext;
 
@@ -29,32 +30,9 @@ namespace CIS174GameProject.Shared.Orchestrators
             return await _projectContext.SaveChangesAsync();
         }
 
-        public async Task<ErrorViewModel> CauseError()
+        public void CauseError()
         {
-            try
-            {
-                throw new OutOfMemoryException();
-            }
-            catch (OutOfMemoryException ex)
-            {
-                ErrorViewModel errorViewModel = new ErrorViewModel();
-
-                errorViewModel.ErrorId = Guid.NewGuid();
-                errorViewModel.ErrorDate = DateTime.Now;
-                errorViewModel.StackTrace = ex.StackTrace;
-                errorViewModel.ErrorMessage = ex.Message;
-                if (ex.InnerException is null)
-                {
-                    errorViewModel.InnerExceptions = "None";
-                }
-                else
-                { 
-                    errorViewModel.InnerExceptions = ex.InnerException.ToString();
-                }
-                await CreateErrorLog(errorViewModel);
-
-                return (errorViewModel);
-            }
+            throw new OutOfMemoryException();
         }
     }
 }

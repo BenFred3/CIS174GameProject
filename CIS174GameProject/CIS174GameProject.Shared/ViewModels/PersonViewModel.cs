@@ -1,4 +1,4 @@
-﻿using CIS174GameProject.Domain.Enums;
+﻿using CIS174GameProject.Shared.Enums;
 using System;
 
 namespace CIS174GameProject.Shared.ViewModels

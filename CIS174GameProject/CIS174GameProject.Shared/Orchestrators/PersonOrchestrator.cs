@@ -1,16 +1,17 @@
 ﻿using CIS174GameProject.Domain;
 using CIS174GameProject.Domain.Entities;
 using CIS174GameProject.Shared.ViewModels;
+using CIS174GameProject.Shared.Enums;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 
 namespace CIS174GameProject.Shared.Orchestrators 
 {
-    public class PersonOrchestrator
+    public class PersonOrchestrator : IPersonOrchestrator
     {
         private readonly ProjectContext _projectContext;
 
@@ -26,7 +27,7 @@ namespace CIS174GameProject.Shared.Orchestrators
                 PersonId = person.PersonId,
                 FirstName = person.FirstName,
                 LastName = person.LastName,
-                Gender = person.Gender,
+                Gender = (int) person.Gender,
                 DateCreated = DateTime.Now,
                 Email = person.Email,
                 PhoneNumber = person.PhoneNumber
@@ -41,7 +42,7 @@ namespace CIS174GameProject.Shared.Orchestrators
             {
                 FirstName = x.FirstName,
                 LastName = x.LastName,
-                Gender = x.Gender, 
+                Gender = (GenderEnum) x.Gender, 
                 DateCreated = x.DateCreated,
                 Email = x.Email,
                 PhoneNumber = x.PhoneNumber           
@@ -61,7 +62,7 @@ namespace CIS174GameProject.Shared.Orchestrators
 
             updateEntity.FirstName = person.FirstName;
             updateEntity.LastName = person.LastName;
-            updateEntity.Gender = person.Gender;
+            updateEntity.Gender = (int) person.Gender;
             updateEntity.Email = person.Email;
             updateEntity.PhoneNumber = person.PhoneNumber;
 
@@ -84,7 +85,7 @@ namespace CIS174GameProject.Shared.Orchestrators
                 PersonId = person.PersonId,
                 FirstName = person.FirstName,
                 LastName = person.LastName,
-                Gender = person.Gender,
+                Gender = (GenderEnum) person.Gender,
                 DateCreated = person.DateCreated,
                 Email = person.Email,
                 PhoneNumber = person.PhoneNumber

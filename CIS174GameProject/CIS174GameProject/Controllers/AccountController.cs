@@ -14,6 +14,7 @@ using CIS174GameProject.Shared.Orchestrators;
 
 namespace CIS174GameProject.Controllers
 {
+    [ExceptionHandler]
     [Authorize]
     public class AccountController : Controller
     {
@@ -483,7 +484,7 @@ namespace CIS174GameProject.Controllers
             }
         }
 
-        protected override async void OnException(ExceptionContext ex)
+        protected async void OnExceptionAsync(ExceptionContext ex)
         {
             ex.ExceptionHandled = true;
 

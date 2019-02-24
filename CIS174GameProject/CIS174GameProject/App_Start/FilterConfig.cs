@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using CIS174GameProject.Controllers;
+using System.Web;
 using System.Web.Mvc;
 
 namespace CIS174GameProject
@@ -7,7 +8,7 @@ namespace CIS174GameProject
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionHandlerAttribute());
         }
     }
 }

@@ -12,6 +12,7 @@ using CIS174GameProject.Shared.Orchestrators;
 
 namespace CIS174GameProject.Controllers
 {
+    [ExceptionHandler]
     [Authorize]
     public class ManageController : Controller
     {
@@ -337,7 +338,7 @@ namespace CIS174GameProject.Controllers
             base.Dispose(disposing);
         }
 
-        protected override async void OnException(ExceptionContext ex)
+        protected async void OnExceptionAsync(ExceptionContext ex)
         {
             ex.ExceptionHandled = true;
 
