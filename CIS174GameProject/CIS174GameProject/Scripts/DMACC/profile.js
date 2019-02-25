@@ -9,7 +9,7 @@
         $("#personId").val(data.PersonId);
         $("#firstName").val(data.FirstName);
         $("#lastName").val(data.LastName);
-        $("#gender").val(data.Gender);
+        $("#genderSelect").val(data.Gender);
         $("#email").val(data.Email);
         $("#dateCreated").val(data.DateCreated);
         $("#phoneNumber").val(data.PhoneNumber);
@@ -46,45 +46,75 @@ function searchPeopleCreate()
 
 function createPerson()
 {
+    if (!$("#successMessage").is(":hidden"))
+    {
+        $("#successMessage").addClass("hidden");
+    }
+
+    if (!$("#errorMessage").is(":hidden"))
+    {
+        $("#errorMessage").addClass("hidden");
+    }
+
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
-    var gender = $("#gender").val();
+    var gender = $("#genderSelect").val();
     var email = $("#email").val();
     var phoneNumber = $("#phoneNumber").val();
 
-    var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
-    if (phoneNumber != "")
+    if (!firstName)
     {
-        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        $("#errorMessage").removeClass("hidden").text('A first name is required.');
+        return ("");
+    }
 
-        if (phoneno.test(phoneNumber) == false)
-        {
-            alert("Please enter a valid phone number.");
-            return ("");
-        }
+    if (!lastName)
+    {
+        $("#errorMessage").removeClass("hidden").text('A last name is required.');
+        return ("");
+    }
+
+    if (!email)
+    {
+        $("#errorMessage").removeClass("hidden").text('A email is required.');
+        return ("");
     }
 
     if (firstName.length > 50)
     {
-        alert("Please enter in a first name that is less than 50 characters.");
+        $("#errorMessage").removeClass("hidden").text('Please enter in a first name that is less than 50 characters.');
         return ("");
     }
 
     if (lastName.length > 50)
     {
-        alert("Please enter in a last name that is less than 50 characters.");
+        $("#errorMessage").removeClass("hidden").text('Please enter in a last name that is less than 50 characters.');
         return ("");
     }
 
     if (email.length > 100)
     {
-        alert("Please enter in a email that is less than 100 characters.");
+        $("#errorMessage").removeClass("hidden").text('Please enter in a email that is less than 100 characters.');
         return ("");
     }
 
-    if (gender < 0 || gender > 2)
+    if (phoneNumber != "")
     {
-        alert("Please stop messing with the slider.");
+        var phoneNumber = document.forms["personForm"]["phoneNumber"].value;
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        if (phoneno.test(phoneNumber) == false)
+        {
+            $("#errorMessage").removeClass("hidden").text('Please enter a valid phone number.');
+            return ("");
+        }
+    }
+
+    var emailcheck = /[^@\s]+@[^@\s]+\.[^@\s]+/;
+
+    if (emailcheck.test(email) == false)
+    {
+        $("#errorMessage").removeClass("hidden").text('Please enter a valid email address.');
         return ("");
     }
 
@@ -101,23 +131,71 @@ function createPerson()
     }).done(function (data) {
         if (data)
         {
-            alert("Success!");
+            $("#successMessage").removeClass("hidden").text('Successfully updated the database.');
+            $("#Success").removeClass("hidden");
+            $("#CreateForm").addClass("hidden");
         }
         else
         {
-            alert("Failure to Create.");
+            $("#errorMessage").removeClass("hidden").text('There was an error while updating the database.');
         }
     });
 }
 
 function updatePerson()
 {
+    if (! $("#successMessage").is(":hidden"))
+    {
+        $("#successMessage").addClass("hidden");
+    }
+
+    if (! $("#errorMessage").is(":hidden"))
+    {
+        $("#errorMessage").addClass("hidden");
+    }
+
     var personId = $("#personId").val();
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
-    var gender = $("#gender").val();
+    var gender = $("#genderSelect").val();
     var email = $("#email").val();
     var phoneNumber = $("#phoneNumber").val();
+
+    if (!firstName)
+    {
+        $("#errorMessage").removeClass("hidden").text('A first name is required.');
+        return ("");
+    }
+
+    if (!lastName)
+    {
+        $("#errorMessage").removeClass("hidden").text('A last name is required.');
+        return ("");
+    }
+
+    if (!email)
+    {
+        $("#errorMessage").removeClass("hidden").text('A email is required.');
+        return ("");
+    }
+
+    if (firstName.length > 50)
+    {
+        $("#errorMessage").removeClass("hidden").text('Please enter in a first name that is less than 50 characters.');
+        return ("");
+    }
+
+    if (lastName.length > 50)
+    {
+        $("#errorMessage").removeClass("hidden").text('Please enter in a last name that is less than 50 characters.');
+        return ("");
+    }
+
+    if (email.length > 100)
+    {
+        $("#errorMessage").removeClass("hidden").text('Please enter in a email that is less than 100 characters.');
+        return ("");
+    }
 
     if (phoneNumber != "")
     {
@@ -126,32 +204,16 @@ function updatePerson()
 
         if (phoneno.test(phoneNumber) == false)
         {
-            alert("Please enter a valid phone number.");
+            $("#errorMessage").removeClass("hidden").text('Please enter a valid phone number.');
             return ("");
         }
     }
 
-    if (firstName.length > 50)
-    {
-        alert("Please enter in a first name that is less than 50 characters.");
-        return ("");
-    }
+    var emailcheck = /[^@\s]+@[^@\s]+\.[^@\s]+/;
 
-    if (lastName.length > 50)
+    if (emailcheck.test(email) == false)
     {
-        alert("Please enter in a last name that is less than 50 characters.");
-        return ("");
-    }
-
-    if (email.length > 100)
-    {
-        alert("Please enter in a email that is less than 100 characters.");
-        return ("");
-    }
-
-    if (gender < 0 || gender > 2)
-    {
-        alert("Please stop messing with the slider.");
+        $("#errorMessage").removeClass("hidden").text('Please enter a valid email address.');
         return ("");
     }
 
@@ -168,13 +230,18 @@ function updatePerson()
         }
     }).done(function (data)
     {
+        $("Form").submit(function (f)
+        {
+            f.preventDefault();
+        });
+
         if (data)
         {
-            alert("Success!");
+            $("#successMessage").removeClass("hidden").text('Successfully updated the database.');
         }
         else
         {
-            alert("Failure to Upload.");
+            $("#errorMessage").removeClass("hidden").text('There was an error while updating the database.');
         }
     });
 }
