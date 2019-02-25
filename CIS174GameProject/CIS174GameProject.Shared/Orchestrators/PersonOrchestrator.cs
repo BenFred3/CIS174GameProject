@@ -40,6 +40,7 @@ namespace CIS174GameProject.Shared.Orchestrators
         {
             var people = _projectContext.People.Select(x => new PersonViewModel
             {
+                PersonId = x.PersonId,
                 FirstName = x.FirstName,
                 LastName = x.LastName,
                 Gender = (GenderEnum) x.Gender, 

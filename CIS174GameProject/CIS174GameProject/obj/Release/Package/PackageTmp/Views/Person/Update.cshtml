@@ -9,15 +9,26 @@
     <p> You haven't set up your profile before. Click here to do so! </p>
     @Html.ActionLink("[Create your profile]", "Create")
 </div>
+
+<div class="alert alert-success hidden" role="alert" id="successMessage"></div>
+
+<div class="alert alert-danger hidden" role="alert" id="errorMessage"></div>
+
 <div id="Form" class="hidden">
     <input id="personId" type="hidden">
-    <form name="personForm" onsubmit="updatePerson()">
+    <form name="personForm">
         <p>First Name: <input id="firstName" type="text" required></p>
         <p>Last Name: <input id="lastName" type="text" required></p>
-        <p>Gender: (1 - Male, 2 - Female, 3 - Other) <input id="gender" type="range" name="gender" min="0" max="2" step="1"></p>
         <p>Date Created: <input id="dateCreated" type="datetime" readonly></p>
         <p>Email: <input id="email" type="email" required></p>
         <p>Phone Number: <input id="phoneNumber" type="text"></p>
-        <input type="submit" value="Save">
+        Gender: 
+        <select form="CreateForm" name="genderSelect" id="genderSelect" class="ui dropdown">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+            <option value="2">Other</option>
+        </select>
+        <br /><br />
+        <button type="button" onclick="updatePerson()" value="Save">Save</button>
     </form>
 </div>

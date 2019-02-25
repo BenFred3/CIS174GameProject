@@ -10,7 +10,5 @@ namespace CIS174GameProject.Shared.Orchestrators.Interfaces
     interface IProjectMembersOrchestrator
     {
         List<ProjectMembersViewModel> GetAllProjectMembers();
-
-
     }
 }

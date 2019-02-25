@@ -5,6 +5,9 @@
 <script>
     searchPeopleCreate();
 </script>
+
+<div class="alert alert-success hidden" role="alert" id="successMessage"></div>
+
 <div id="Success" class="hidden">
     <p> You have succesfully created a profile. Please go back to your profile page to access it!</p>
     [
@@ -12,13 +15,21 @@
     ]
 </div>
 
+<div class="alert alert-danger hidden" role="alert" id="errorMessage"></div>
+
 <div id="CreateForm" class="hidden">
-    <form name="personForm" onsubmit="createPerson()">
+    <form name="personForm">
         <p>First Name: <input id="firstName" type="text" required></p>
         <p>Last Name: <input id="lastName" type="text" required></p>
-        <p>Gender: (1 - Male, 2 - Female, 3 - Other) <input id="gender" type="range" name="gender" min="0" max="2" step="1"></p>
         <p>Email: <input id="email" type="email" required></p>
         <p>Phone Number: <input id="phoneNumber" type="text"></p>
-        <input type="submit" value="Save">
+        Gender:
+        <select form="CreateForm" name="genderSelect" id="genderSelect" class="ui dropdown">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+            <option value="2">Other</option>
+        </select>
+        <br /><br />
+        <button type="button" onclick="createPerson()" value="Save">Save</button>
     </form>
 </div>
