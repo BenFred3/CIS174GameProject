@@ -1,0 +1,11 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "ErrorPage";
+}
+<h1>Error</h1>
+
+<p>An error has occured. It has been logged and sent to a system adminstrator.</p>
+<p>Click the link below to return to the homepage.</p>
+<br />
+@Html.ActionLink("Return to the homepage", "Index", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, null)

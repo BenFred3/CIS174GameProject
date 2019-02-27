@@ -1,32 +1,9 @@
-﻿@model System.Web.Mvc.HandleErrorInfo
-@{ 
+﻿@{ 
     ViewBag.Title = "Error";
 }
-<br />
-<div class="list-header clearfix">
-    <span>Error</span>
-</div>
+<h1>Error</h1>
 
-<div class="list-sfs-holder">
-    <div class="alert alert-error">
-        An unexpected error has occurred. Please contact the system administrator.
-    </div>
-    @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
-    {
-        <div>
-            <p>
-                <b>Exception: </b> @Model.Exception.Message<br />
-                <b>Controller: </b>@Model.ControllerName <br />
-                <b>Action: </b>@Model.ActionName
-            </p>
-            <div style="overflow:scroll">
-                <pre>
-                   @Model.Exception.StackTrace
-                </pre>
-            </div>
-        </div>
-    }
-    <div>
-         @Html.ActionLink("Return to the homepage", "Index", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, null)
-    </div>
-</div>
+<p>An error has occured. It has been logged and sent to a system adminstrator.</p>
+<p>Click the link below to return to the homepage.</p>
+ <br />
+@Html.ActionLink("Return to the homepage", "Index", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, null)

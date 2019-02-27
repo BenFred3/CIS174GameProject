@@ -76,7 +76,7 @@ namespace CIS174GameProject.Shared.Orchestrators
         {
             var person = await _projectContext.People.Where(x => x.PersonId.Equals(searchGuid)).FirstOrDefaultAsync();
 
-            if (person == null)
+            if (person == null || person.PersonId == null)
             {
                 return new PersonViewModel();
             }

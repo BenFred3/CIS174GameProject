@@ -20,30 +20,6 @@ namespace CIS174GameProject.Controllers
         {
             return View();
         }
-
-        protected async void OnExceptionAsync(ExceptionContext ex)
-        {
-            ex.ExceptionHandled = true;
-
-            ErrorOrchestrator eo = new ErrorOrchestrator();
-            ErrorViewModel errorViewModel = new ErrorViewModel
-            {
-                ErrorId = Guid.NewGuid(),
-                ErrorDate = DateTime.Now,
-                StackTrace = ex.Exception.StackTrace,
-                ErrorMessage = ex.Exception.Message
-            };
-            if (ex.Exception.InnerException is null)
-            {
-                errorViewModel.InnerExceptions = "None";
-            }
-            else
-            {
-                errorViewModel.InnerExceptions = ex.Exception.InnerException.ToString();
-            }
-            await eo.CreateErrorLog(errorViewModel);
-
-            ex.Result = RedirectToAction("Error", "Error");
-        }
+        
     }
 }

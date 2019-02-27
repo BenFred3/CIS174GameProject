@@ -1,7 +1,8 @@
 ﻿@{
     ViewBag.Title = "NotFound";
 }
-
 <h2>Not Found</h2>
 
 <p>The page you were looking for cannot be found. If you believe this is incorrect please contact a system adminstrator.</p>
+
+@Html.ActionLink("Return to the homepage", "Index", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, null)
