@@ -5,6 +5,7 @@ using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using CIS174GameProject.ErrorReport;
 
 namespace CIS174GameProject.Controllers
 {

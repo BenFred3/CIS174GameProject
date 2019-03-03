@@ -1,4 +1,4 @@
-﻿using CIS174GameProject.Controllers;
+﻿using CIS174GameProject.ErrorReport;
 using System.Web;
 using System.Web.Mvc;
 

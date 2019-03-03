@@ -1,9 +1,4 @@
-﻿using CIS174GameProject.Shared.Orchestrators;
-using CIS174GameProject.Shared.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CIS174GameProject.ErrorReport;
 using System.Web.Mvc;
 
 namespace CIS174GameProject.Controllers
