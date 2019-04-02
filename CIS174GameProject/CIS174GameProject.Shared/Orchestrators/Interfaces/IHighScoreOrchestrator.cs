@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators.Interfaces
 {
-    interface IHighScoreOrchestrator
+    public interface IHighScoreOrchestrator
     {
-        List<HighScoreViewModel> GetAllHighScores();
+        List<HighScoreViewModel> GetAllHighscores();
+        List<HighScoreViewModel> GetHighscoresSorted();
+        List<HighScoreViewModel> GetTopFiveHighscores();
+        Task<int> CreateHighscore(HighScoreViewModel newHighscore);
+        Task<string> UpdateHighscore(HighScoreViewModel newHighscore);
     }
 }

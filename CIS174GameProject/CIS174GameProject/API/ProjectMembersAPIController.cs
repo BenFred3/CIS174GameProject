@@ -1,8 +1,6 @@
-﻿using System;
-using CIS174GameProject.Shared.Orchestrators;
+﻿using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace CIS174GameProject.API
@@ -10,11 +8,11 @@ namespace CIS174GameProject.API
     [Route("api/v1/members")]
     public class ProjectMembersAPIController : ApiController
     {
-        private readonly ProjectMembersOrchestrator _projectMembersOrchestrator;
+        private readonly IProjectMembersOrchestrator _projectMembersOrchestrator;
 
-        public ProjectMembersAPIController()
+        public ProjectMembersAPIController(IProjectMembersOrchestrator projectMembersOrchestrator)
         {
-            _projectMembersOrchestrator = new ProjectMembersOrchestrator();
+            _projectMembersOrchestrator = projectMembersOrchestrator;
         }
 
         [HttpGet]

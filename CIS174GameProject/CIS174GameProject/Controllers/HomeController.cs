@@ -15,6 +15,5 @@ namespace CIS174GameProject.Controllers
         {
             return View();
         }
-        
     }
 }

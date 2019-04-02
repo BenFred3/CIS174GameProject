@@ -1,6 +1,8 @@
-﻿using CIS174GameProject.Shared.Orchestrators;
+﻿using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace CIS174GameProject.API
@@ -8,19 +10,80 @@ namespace CIS174GameProject.API
     [Route("api/v1/highscore")]
     public class HighScoreAPIController : ApiController
     {
-        private readonly HighScoreOrchestrator _highScoreOrchestrator;
+        private readonly IHighScoreOrchestrator _highScoreOrchestrator;
 
-        public HighScoreAPIController()
+        public HighScoreAPIController(IHighScoreOrchestrator highScoreOrchestrator)
         {
-            _highScoreOrchestrator = new HighScoreOrchestrator();
+            _highScoreOrchestrator = highScoreOrchestrator;
         }
 
         [HttpGet]
-        public List<HighScoreViewModel> GetAllPeople()
+        [Route("highscore/get")]
+        public List<HighScoreViewModel> GetAllHighscores()
         {
-            var highscores = _highScoreOrchestrator.GetAllHighScores();
+            var highscores = _highScoreOrchestrator.GetAllHighscores();
 
             return highscores;
+        }
+
+        public List<HighScoreViewModel> GetHighscoresSorted()
+        {
+            var highscores = _highScoreOrchestrator.GetHighscoresSorted();
+
+            return highscores;
+        }
+
+        public List<HighScoreViewModel> GetTopFiveHighscores()
+        {
+            var highscores = _highScoreOrchestrator.GetTopFiveHighscores();
+
+            return highscores;
+        }
+
+        public async Task<string> CreateHighscore(Guid personID, decimal newHighscore)
+        {
+            var updatedChanges = await _highScoreOrchestrator.CreateHighscore(new HighScoreViewModel
+            {
+                PersonId = personID,
+                Score = newHighscore,
+                DateAttained = DateTime.Now
+            });
+
+            if (updatedChanges == 0)
+            {
+                return "Nothing was created.";
+            }
+            else if (updatedChanges == 1)
+            {
+                return "Highscore was created.";
+            }
+            else
+            {
+                return "Error has occured";
+            }
+        }
+
+        public async Task<string> UpdateHighscore(Guid personID, decimal newHighscore)
+        {
+            List<HighScoreViewModel> currentHighscores = GetAllHighscores();
+            
+            HighScoreViewModel inDatabase = currentHighscores.Find(x => x.PersonId.Equals(personID));
+
+            if (inDatabase.PersonId == personID && inDatabase.Score == newHighscore)
+            {
+                var result = await _highScoreOrchestrator.UpdateHighscore(new HighScoreViewModel
+                {
+                    PersonId = personID,
+                    Score = newHighscore,
+                    DateAttained = DateTime.Now
+                });
+
+                return result;
+            }
+            else
+            {
+                return await CreateHighscore(personID, newHighscore);
+            }
         }
     }
 }

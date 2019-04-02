@@ -1,4 +1,5 @@
 ﻿using CIS174GameProject.Shared.Orchestrators;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,11 +10,11 @@ namespace CIS174GameProject.API
     [Route("api/v1/person")]
     public class PersonAPIController : ApiController
     {
-        private readonly PersonOrchestrator _personOrchestrator;
+        private readonly IPersonOrchestrator _personOrchestrator;
 
-        public PersonAPIController()
+        public PersonAPIController(IPersonOrchestrator personOrchestrator)
         {
-            _personOrchestrator = new PersonOrchestrator();
+            _personOrchestrator = personOrchestrator;
         }
 
         [HttpGet]

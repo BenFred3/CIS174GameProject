@@ -24,5 +24,9 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csproj.CopyComplete
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.dll
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.pdb
-B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.Migrations.InitialDatabaseCreation.resources
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\Ninject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\Ninject.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.Migrations.RedoDatabaseCreation.resources
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Debug\CIS174GameProject.Domain.csproj.GenerateResource.cache
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Debug\WebActivatorEx.dll

@@ -13,3 +13,5 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Release\CIS174GameProject.Shared.csproj.CopyComplete
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Release\CIS174GameProject.Shared.dll
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Release\CIS174GameProject.Shared.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\Ninject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\Ninject.xml

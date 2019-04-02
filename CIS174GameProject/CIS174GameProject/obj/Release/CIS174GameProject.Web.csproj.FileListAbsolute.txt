@@ -119,3 +119,12 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Release\CIS174GameProject.Web.csproj.CopyComplete
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Release\CIS174GameProject.dll
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\obj\Release\CIS174GameProject.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.WebHost.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Mvc.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\WebActivatorEx.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.WebHost.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Mvc.xml

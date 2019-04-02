@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators.Interfaces
 {
-    interface IErrorOrchestrator
+    public interface IErrorOrchestrator
     {
         Task<int> CreateErrorLog(ErrorViewModel error);
         void CauseError();

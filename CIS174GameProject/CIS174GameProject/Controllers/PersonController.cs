@@ -1,6 +1,5 @@
 ﻿using CIS174GameProject.Models;
-using Microsoft.AspNet.Identity;
-using CIS174GameProject.Shared.Orchestrators;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +11,12 @@ namespace CIS174GameProject.Controllers
     [ExceptionHandler]
     public class PersonController : Controller
     {
-        private PersonOrchestrator _personOrchestrator = new PersonOrchestrator();
+        private readonly IPersonOrchestrator _personOrchestrator;
+
+        public PersonController(IPersonOrchestrator personOrchestrator)
+        {
+            _personOrchestrator = personOrchestrator;
+        }
 
         public ActionResult Index()
         {

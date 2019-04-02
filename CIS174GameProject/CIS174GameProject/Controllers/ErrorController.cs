@@ -1,6 +1,6 @@
 ﻿using CIS174GameProject.ErrorReport;
 using CIS174GameProject.Models;
-using CIS174GameProject.Shared.Orchestrators;
+using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +12,12 @@ namespace CIS174GameProject.Controllers
     [ExceptionHandler]
     public class ErrorController : Controller
     {
-        private ErrorOrchestrator _errorOrchestrator = new ErrorOrchestrator();
+        private readonly IErrorOrchestrator _errorOrchestrator;
+
+        public ErrorController(IErrorOrchestrator errorOrchestrator)
+        {
+            _errorOrchestrator = errorOrchestrator;
+        }
 
         public ViewResult Error()
         {

@@ -6,7 +6,7 @@ namespace CIS174GameProject.Domain.Entities
     public class HighScore
     {
         [Key]
-        public Guid HighSchoolId { get; set; }
+        public Guid HighscoreId { get; set; }
 
         public Guid PersonId { get; set; }
 

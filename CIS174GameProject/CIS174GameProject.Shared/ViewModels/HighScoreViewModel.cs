@@ -8,6 +8,7 @@ namespace CIS174GameProject.Shared.ViewModels
 {
     public class HighScoreViewModel
     {
+        public Guid PersonId { get; set; }
         public decimal Score { get; set; }
         public DateTime? DateAttained { get; set; }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators.Interfaces
 {
-    interface IProjectMembersOrchestrator
+    public interface IProjectMembersOrchestrator
     {
         List<ProjectMembersViewModel> GetAllProjectMembers();
     }

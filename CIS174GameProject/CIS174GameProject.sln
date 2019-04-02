@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIS174GameProject.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIS174GameProject.Shared", "CIS174GameProject.Shared\CIS174GameProject.Shared.csproj", "{A93572CE-97EA-4398-85CA-740B68AB6DAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIS174GameProject.Test", "CIS174GameProject.Test\CIS174GameProject.Test.csproj", "{CCCC432C-E3D2-414D-B9FD-91312F48AF4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A93572CE-97EA-4398-85CA-740B68AB6DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A93572CE-97EA-4398-85CA-740B68AB6DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A93572CE-97EA-4398-85CA-740B68AB6DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCC432C-E3D2-414D-B9FD-91312F48AF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCC432C-E3D2-414D-B9FD-91312F48AF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCC432C-E3D2-414D-B9FD-91312F48AF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCC432C-E3D2-414D-B9FD-91312F48AF4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

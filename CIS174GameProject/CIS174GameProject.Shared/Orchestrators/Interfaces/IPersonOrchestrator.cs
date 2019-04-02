@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators.Interfaces
 {
-    interface IPersonOrchestrator
+    public interface IPersonOrchestrator
     {
         Task<int> CreatePerson(PersonViewModel person);
         Task<List<PersonViewModel>> GetAllPeople();

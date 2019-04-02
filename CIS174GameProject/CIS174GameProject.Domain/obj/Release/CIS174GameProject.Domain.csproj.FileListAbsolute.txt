@@ -12,3 +12,6 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Release\CIS174GameProject.Domain.csproj.CopyComplete
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Release\CIS174GameProject.Domain.dll
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Release\CIS174GameProject.Domain.pdb
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Release\Ninject.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\bin\Release\Ninject.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Domain\obj\Release\CIS174GameProject.Domain.Migrations.UpdatingDatabase.resources
