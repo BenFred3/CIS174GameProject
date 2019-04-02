@@ -5,6 +5,7 @@ namespace CIS174GameProject.App_Start
 {
     using System;
     using System.Web;
+    using System.Web.Http;
     using CIS174GameProject.Shared.Orchestrators;
     using CIS174GameProject.Shared.Orchestrators.Interfaces;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
@@ -12,6 +13,7 @@ namespace CIS174GameProject.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using Ninject.Web.WebApi;
 
     public static class NinjectWebCommon 
     {
@@ -47,6 +49,7 @@ namespace CIS174GameProject.App_Start
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
                 RegisterServices(kernel);
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
                 return kernel;
             }
             catch
@@ -62,8 +65,8 @@ namespace CIS174GameProject.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IHighScoreOrchestrator>().To<HighScoreOrchestrator>();
             kernel.Bind<IPersonOrchestrator>().To<PersonOrchestrator>();
+            kernel.Bind<IHighScoreOrchestrator>().To<HighScoreOrchestrator>();
             kernel.Bind<IErrorOrchestrator>().To<ErrorOrchestrator>();
             kernel.Bind<IProjectMembersOrchestrator>().To<ProjectMembersOrchestrator>();
         }        

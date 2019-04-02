@@ -16,6 +16,7 @@ namespace CIS174GameProject.API
         }
 
         [HttpGet]
+        [Route("api/v1/members/get")]
         public List<ProjectMembersViewModel> GetProjectMembers()
         {
             var projectMembers = _projectMembersOrchestrator.GetAllProjectMembers();

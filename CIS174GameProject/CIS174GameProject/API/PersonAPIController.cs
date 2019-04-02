@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace CIS174GameProject.API
 {
-    [Route("api/v1/person")]
+    [Route("api/v1/people")]
     public class PersonAPIController : ApiController
     {
         private readonly IPersonOrchestrator _personOrchestrator;
@@ -18,6 +18,7 @@ namespace CIS174GameProject.API
         }
 
         [HttpGet]
+        [Route("api/v1/people/get")]
         public Task<List<PersonViewModel>> GetAllPeople()
         {
             var people = _personOrchestrator.GetAllPeople();

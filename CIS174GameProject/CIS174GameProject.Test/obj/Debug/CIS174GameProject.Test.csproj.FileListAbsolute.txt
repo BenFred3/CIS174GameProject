@@ -81,3 +81,5 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Test\bin\Debug\System.Web.Razor.xml
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Test\bin\Debug\System.Net.Http.Formatting.xml
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Test\bin\Debug\System.Web.WebPages.Deployment.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Test\bin\Debug\Ninject.Web.WebApi.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Test\bin\Debug\Ninject.Web.WebApi.xml

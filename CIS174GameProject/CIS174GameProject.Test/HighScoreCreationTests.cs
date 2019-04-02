@@ -1,4 +1,5 @@
 ﻿using AutoMoq;
+using CIS174GameProject.Shared.Orchestrators;
 using CIS174GameProject.Shared.Orchestrators.Interfaces;
 using CIS174GameProject.Shared.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -39,8 +40,8 @@ namespace CIS174GameProject.Test
             var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
             var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
             var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-
-            var orchestrator = _mocker.Create<IHighScoreOrchestrator>();
+            
+            var orchestrator = _mocker.Create<HighScoreOrchestrator>();
 
             var result1 = orchestrator.CreateHighscore(Person1);
             Assert.AreEqual(1, result1);

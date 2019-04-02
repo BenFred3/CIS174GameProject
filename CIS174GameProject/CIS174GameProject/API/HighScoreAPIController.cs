@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace CIS174GameProject.API
 {
-    [Route("api/v1/highscore")]
+    [Route("api/v1/highscores")]
     public class HighScoreAPIController : ApiController
     {
         private readonly IHighScoreOrchestrator _highScoreOrchestrator;
@@ -16,9 +16,9 @@ namespace CIS174GameProject.API
         {
             _highScoreOrchestrator = highScoreOrchestrator;
         }
-
+        
         [HttpGet]
-        [Route("highscore/get")]
+        [Route("api/v1/highscores/get")]
         public List<HighScoreViewModel> GetAllHighscores()
         {
             var highscores = _highScoreOrchestrator.GetAllHighscores();
