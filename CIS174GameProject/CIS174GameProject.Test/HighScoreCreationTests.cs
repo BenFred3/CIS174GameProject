@@ -40,7 +40,8 @@ namespace CIS174GameProject.Test
             var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
             var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
             var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-            
+
+            /*
             var orchestrator = _mocker.Create<HighScoreOrchestrator>();
 
             var result1 = orchestrator.CreateHighscore(Person1);
@@ -53,15 +54,30 @@ namespace CIS174GameProject.Test
             Assert.AreEqual(1, result3);
 
             var HSList = orchestrator.GetHighscoresSorted();
+            */
+
+            _mocker.GetMock<IHighScoreOrchestrator>()
+                .Setup(x => x.CreateHighscore(Person1))
+                .Returns(Task.FromResult(1));
+
+            _mocker.GetMock<IHighScoreOrchestrator>()
+                .Setup(x => x.CreateHighscore(Person2))
+                .Returns(Task.FromResult(1));
+
+            _mocker.GetMock<IHighScoreOrchestrator>()
+                .Setup(x => x.CreateHighscore(Person3))
+                .Returns(Task.FromResult(1));
+
+            List<HighScoreViewModel> HSList = new List<HighScoreViewModel> { Person1, Person2, Person3 };
 
             int indexCorrect1 = HSList.IndexOf(Person1);
-            Assert.AreEqual(1, indexCorrect1);
+            Assert.AreEqual(0, indexCorrect1);
 
             int indexCorrect2= HSList.IndexOf(Person2);
-            Assert.AreEqual(2, indexCorrect2);
+            Assert.AreEqual(1, indexCorrect2);
 
             int indexCorrect3 = HSList.IndexOf(Person3);
-            Assert.AreEqual(3, indexCorrect3);
+            Assert.AreEqual(2, indexCorrect3);
         }
 
         [TestMethod]
@@ -70,7 +86,7 @@ namespace CIS174GameProject.Test
             var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
             var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
             var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-            var Person3Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 100.00m);
+            var Person3Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 201.00m);
 
             _mocker.GetMock<IHighScoreOrchestrator>()
                 .Setup(x => x.UpdateHighscore(Person3Updated))
@@ -104,7 +120,7 @@ namespace CIS174GameProject.Test
 
             Assert.AreEqual(201.00m, Person3Updated.Score);
 	    }
-        /*
+
         [TestMethod]
         public void newHighscoreTest_ReturnsFalse()
         {
@@ -129,27 +145,51 @@ namespace CIS174GameProject.Test
         [TestMethod]
         public void integrationTest_UpdateLeaderboard_ReturnsTrue()
         {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
+            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m); 
+            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m); 
             var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
             var Person4 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 100.00m);
+            var Person5 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 50.00m);
+            var Person6 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 300.00m);
 
-            var Person4Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 700.00m);
+            List<HighScoreViewModel> HSListOrignal = new List<HighScoreViewModel> { Person1, Person2, Person3, Person4, Person5, Person6 };
+
+            var Person4Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 700.00m); 
 
             _mocker.GetMock<IHighScoreOrchestrator>()
                 .Setup(x => x.UpdateHighscore(Person4Updated))
                 .Returns(Task.FromResult("Succesfully Updated."));
 
+            List<HighScoreViewModel> HSListSorted = new List<HighScoreViewModel> { };
+
             _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x)
+                .Setup(x => x.GetTopFiveHighscores())
+                .Returns(HSListSorted);
 
-            var TopFiveWork = orchestrator.GetTopFiveHighscores();
+            HSListSorted.Add(Person1);
+            HSListSorted.Add(Person4Updated);
+            HSListSorted.Add(Person2);
+            HSListSorted.Add(Person6);
+            HSListSorted.Add(Person3);
 
-            List<HighScoreViewModel> ExpectedList = new List<HighScoreViewModel> { Person1, Person4Updated, Person2, Person3, };
+            //var TopFiveWork = orchestrator.GetTopFiveHighscores();
 
-            Assert.AreEqual(ExpectedList)
+            int indexCorrect1 = HSListSorted.IndexOf(Person1);
+            Assert.AreEqual(0, indexCorrect1);
+
+            int indexCorrect2 = HSListSorted.IndexOf(Person2);
+            Assert.AreEqual(2, indexCorrect2);
+
+            int indexCorrect3 = HSListSorted.IndexOf(Person3);
+            Assert.AreEqual(4, indexCorrect3);
+
+            int indexCorrect4 = HSListSorted.IndexOf(Person4Updated);
+            Assert.AreEqual(1, indexCorrect4);
+
+            int indexCorrect5 = HSListSorted.IndexOf(Person6);
+            Assert.AreEqual(3, indexCorrect5);
         }
-        */
+
         private HighScoreViewModel CreateHS(Guid PersonIdHS, decimal ScoreHS)
         {
             return new HighScoreViewModel
