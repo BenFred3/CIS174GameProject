@@ -1,8 +1,7 @@
-﻿using CIS174GameProject.Shared.ViewModels;
+﻿using CIS174GameProject.Domain.Entities;
+using CIS174GameProject.Shared.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CIS174GameProject.Shared.Orchestrators.Interfaces
@@ -14,5 +13,6 @@ namespace CIS174GameProject.Shared.Orchestrators.Interfaces
         List<HighScoreViewModel> GetTopFiveHighscores();
         Task<int> CreateHighscore(HighScoreViewModel newHighscore);
         Task<string> UpdateHighscore(HighScoreViewModel newHighscore);
+        Task<HighScore> GetHighscore(Guid personId);
     }
 }

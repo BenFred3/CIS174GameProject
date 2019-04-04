@@ -1,6 +1,6 @@
 ﻿using AutoMoq;
-using CIS174GameProject.Shared.Orchestrators;
 using CIS174GameProject.Shared.Orchestrators.Interfaces;
+using CIS174GameProject.Shared.Services;
 using CIS174GameProject.Shared.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -13,191 +13,154 @@ namespace CIS174GameProject.Test
     public class HighScoreCreationTests
     {
         private readonly AutoMoqer _mocker = new AutoMoqer();
-        /*
-        [TestInitialize]
-        public void Initialize()
-        {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
-            var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person1))
-                .Returns(Task.FromResult(1));
-
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person2))
-                .Returns(Task.FromResult(1));
-
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person3))
-                .Returns(Task.FromResult(1));
-        }
-        */
         [TestMethod]
         public void creationOfHighscores_AndInCorrectOrder_ReturnsTrue()
         {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
-            var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
+            // Create a controller to use methods from. This controller simulates what the database would do if given the commands.
+            var controller = _mocker.Create<HighscoreService>();
 
-            /*
-            var orchestrator = _mocker.Create<HighScoreOrchestrator>();
+            // Create three highscores and get the string of the result.
+            var result1 = controller.CreateHighscore(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
+            var result2 = controller.CreateHighscore(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
+            var result3 = controller.CreateHighscore(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
 
-            var result1 = orchestrator.CreateHighscore(Person1);
-            Assert.AreEqual(1, result1);
+            // This is expected string result.
+            var expectedResults = "Highscore was created.";
 
-            var result2 = orchestrator.CreateHighscore(Person2);
-            Assert.AreEqual(1, result2);
+            // Check if the results are equal.
+            Assert.AreEqual(expectedResults, result1);
+            Assert.AreEqual(expectedResults, result2);
+            Assert.AreEqual(expectedResults, result3);
 
-            var result3 = orchestrator.CreateHighscore(Person1);
-            Assert.AreEqual(1, result3);
+            // Create people here to make a list.
+            var HSList = controller.CreateDataThree();
+            
+            // Find the model in the list of highscores, find the index, check if it's what it should be in a ordered list.
+            var foundModel1 = HSList.Find(x => x.PersonId == Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"));
+            var foundModelIndex1 = HSList.IndexOf(foundModel1);
+            Assert.AreEqual(0, foundModelIndex1);
 
-            var HSList = orchestrator.GetHighscoresSorted();
-            */
+            // Find the model in the list of highscores, find the index, check if it's what it should be in a ordered list.
+            var foundModel2 = HSList.Find(x => x.PersonId == Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"));
+            var foundModelIndex2 = HSList.IndexOf(foundModel2);
+            Assert.AreEqual(1, foundModelIndex2);
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person1))
-                .Returns(Task.FromResult(1));
-
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person2))
-                .Returns(Task.FromResult(1));
-
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.CreateHighscore(Person3))
-                .Returns(Task.FromResult(1));
-
-            List<HighScoreViewModel> HSList = new List<HighScoreViewModel> { Person1, Person2, Person3 };
-
-            int indexCorrect1 = HSList.IndexOf(Person1);
-            Assert.AreEqual(0, indexCorrect1);
-
-            int indexCorrect2= HSList.IndexOf(Person2);
-            Assert.AreEqual(1, indexCorrect2);
-
-            int indexCorrect3 = HSList.IndexOf(Person3);
-            Assert.AreEqual(2, indexCorrect3);
+            // Find the model in the list of highscores, find the index, check if it's what it should be in a ordered list.
+            var foundModel3 = HSList.Find(x => x.PersonId == Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"));
+            var foundModelIndex3 = HSList.IndexOf(foundModel3);
+            Assert.AreEqual(2, foundModelIndex3);
         }
 
         [TestMethod]
-        public void newHighscoreTest_ReturnsTrue()
+        public void newHighscoreTest_ReturnsSuccesfullyUpdated()
         {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
-            var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-            var Person3Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 201.00m);
+            // Create a controller to use methods from. This controller simulates what the database would do if given the commands.
+            var controller = _mocker.Create<HighscoreService>();
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.UpdateHighscore(Person3Updated))
-                .Returns(Task.FromResult("Succesfully Updated."));
+            // Create the data.
+            var HSList = controller.CreateDataThree();
 
-            /*
-            // Attempted this, but no matter what I tried I got this error: 
-            // InvalidOperationException: The model backing the 'ProjectContext' context has changed since the database was created. 
-            // Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
-            // Deciding on using method shown now. If this isn't how you want us to do it, I would like to have you walk me through the way it's suppose to be.
-            
-            var orchestrator = _mocker.Create<HighScoreOrchestrator>();
-            
-            var newHighscore = (orchestrator.UpdateHighscore(Person3Updated)).Result;
+            // Find the person.
+            var person3 = HSList.Find(x => x.PersonId == Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"));
 
-            if (newHighscore == false)
-            {
-                Assert.Fail("Highscore didn't update.");
-            }
+            // Update the highscore and set the result of the update to a var.
+            // We have to also pass a previous model because we cannot create that functionality in these tests where in a database we could.
+            var resultOfUpdate = controller.UpdateHighscore(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 201.00m, person3);
 
-            var HSList = orchestrator.GetAllHighscores(); 
+            // Expected result from the update.
+            var expectedResultOfUpdate = "Succesfully Updated.";
 
-            Person3Updated = HSList.Find(x => x.PersonId.Equals(Person3Updated.PersonId));
-            */
-
-            List <HighScoreViewModel> HSList = new List<HighScoreViewModel> { Person1, Person2, Person3Updated };
-            
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.GetAllHighscores())
-                .Returns(HSList);
-
-            Assert.AreEqual(201.00m, Person3Updated.Score);
+            // Check if the right result was found.
+            Assert.AreEqual(expectedResultOfUpdate, resultOfUpdate);
 	    }
 
         [TestMethod]
-        public void newHighscoreTest_ReturnsFalse()
+        public void newHighscoreTest_ReturnsScoreTooLow()
         {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m);
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m);
-            var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-            var Person3Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 100.00m);
+            // Create a controller to use methods from. This controller simulates what the database would do if given the commands.
+            var controller = _mocker.Create<HighscoreService>();
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.UpdateHighscore(Person3Updated))
-                .Returns(Task.FromResult("Score was too low. Cannot replace highscore."));
+            // Create the data.
+            var HSList = controller.CreateDataThree();
 
-            List <HighScoreViewModel> HSList = new List<HighScoreViewModel> { Person1, Person2, Person3Updated };
+            // Find the person.
+            var person3 = HSList.Find(x => x.PersonId == Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"));
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.GetAllHighscores())
-                .Returns(HSList);
+            // Update the highscore and set the result of the update to a var.
+            // We have to also pass a previous model because we cannot create that functionality in these tests where in a database we could.
+            var resultOfUpdate = controller.UpdateHighscore(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 199.00m, person3);
 
-            Assert.IsTrue(Person3.Score < Person3Updated.Score);
+            // Expected result from the update.
+            var expectedResultOfUpdate = "Score was too low. Cannot replace highscore.";
+
+            // Check if the right result was found.
+            Assert.AreEqual(expectedResultOfUpdate, resultOfUpdate);
         }
 
         [TestMethod]
         public void integrationTest_UpdateLeaderboard_ReturnsTrue()
         {
-            var Person1 = CreateHS(Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"), 1000.00m); 
-            var Person2 = CreateHS(Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"), 500.00m); 
-            var Person3 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 200.00m);
-            var Person4 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 100.00m);
-            var Person5 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 50.00m);
-            var Person6 = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 300.00m);
 
-            List<HighScoreViewModel> HSListOrignal = new List<HighScoreViewModel> { Person1, Person2, Person3, Person4, Person5, Person6 };
+            // Create a controller to use methods from. This controller simulates what the database would do if given the commands.
+            var controller = _mocker.Create<HighscoreService>();
 
-            var Person4Updated = CreateHS(Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"), 700.00m); 
+            // Create data.
+            var HSList = controller.CreateDataSix();
+            
+            // Find the person.
+            var person4 = HSList.Find(x => x.PersonId == Guid.Parse("218d58cd-ecfc-43dd-b844-934f701af254"));
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.UpdateHighscore(Person4Updated))
-                .Returns(Task.FromResult("Succesfully Updated."));
+            // Update the highscore and set the result of the update to a var.
+            // We have to also pass a previous model because we cannot create that functionality in these tests where in a database we could.
+            var resultOfUpdate = controller.UpdateHighscore(Guid.Parse("218d58cd-ecfc-43dd-b844-934f701af254"), 700.00m, person4);
 
-            List<HighScoreViewModel> HSListSorted = new List<HighScoreViewModel> { };
+            // Expected result from the update.
+            var expectedResultOfUpdate = "Succesfully Updated.";
 
-            _mocker.GetMock<IHighScoreOrchestrator>()
-                .Setup(x => x.GetTopFiveHighscores())
-                .Returns(HSListSorted);
+            // Check if the right result was found.
+            Assert.AreEqual(expectedResultOfUpdate, resultOfUpdate);
+            
+            // Get the index of the previous person
+            var indexChanged = HSList.IndexOf(person4);
 
-            HSListSorted.Add(Person1);
-            HSListSorted.Add(Person4Updated);
-            HSListSorted.Add(Person2);
-            HSListSorted.Add(Person6);
-            HSListSorted.Add(Person3);
-
-            //var TopFiveWork = orchestrator.GetTopFiveHighscores();
-
-            int indexCorrect1 = HSListSorted.IndexOf(Person1);
-            Assert.AreEqual(0, indexCorrect1);
-
-            int indexCorrect2 = HSListSorted.IndexOf(Person2);
-            Assert.AreEqual(2, indexCorrect2);
-
-            int indexCorrect3 = HSListSorted.IndexOf(Person3);
-            Assert.AreEqual(4, indexCorrect3);
-
-            int indexCorrect4 = HSListSorted.IndexOf(Person4Updated);
-            Assert.AreEqual(1, indexCorrect4);
-
-            int indexCorrect5 = HSListSorted.IndexOf(Person6);
-            Assert.AreEqual(3, indexCorrect5);
-        }
-
-        private HighScoreViewModel CreateHS(Guid PersonIdHS, decimal ScoreHS)
-        {
-            return new HighScoreViewModel
+            // Actually hard update it in the list (Database would do this).
+            HSList[indexChanged] = new HighScoreViewModel
             {
-                PersonId = PersonIdHS,
-                Score = ScoreHS,
+                PersonId = Guid.Parse("218d58cd-ecfc-43dd-b844-934f701af254"),
+                Score = 700.00m,
                 DateAttained = DateTime.Now
             };
+
+            // Resort the list.
+            HSList = controller.SortHighscores(HSList);
+
+            // Get all the people to verify their index number.
+            var person1 = HSList.Find(x => x.PersonId == Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"));
+            var person2 = HSList.Find(x => x.PersonId == Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"));
+            var person3 = HSList.Find(x => x.PersonId == Guid.Parse("218d48cd-ecfc-43dd-b844-934f701af254"));
+            var person4Updated = HSList.Find(x => x.PersonId == Guid.Parse("218d58cd-ecfc-43dd-b844-934f701af254"));
+            var person5 = HSList.Find(x => x.PersonId == Guid.Parse("218d68cd-ecfc-43dd-b844-934f701af254"));
+            var person6 = HSList.Find(x => x.PersonId == Guid.Parse("218d78cd-ecfc-43dd-b844-934f701af254"));
+
+            // Assert that all the highscores are correctly sorted.
+            int indexCorrect1 = HSList.IndexOf(person1);
+            Assert.AreEqual(0, indexCorrect1);
+
+            int indexCorrect2 = HSList.IndexOf(person2);
+            Assert.AreEqual(2, indexCorrect2);
+
+            int indexCorrect3 = HSList.IndexOf(person3);
+            Assert.AreEqual(4, indexCorrect3);
+
+            int indexCorrect4 = HSList.IndexOf(person4Updated);
+            Assert.AreEqual(1, indexCorrect4);
+
+            int indexCorrect5 = HSList.IndexOf(person5);
+            Assert.AreEqual(5, indexCorrect5);
+
+            int indexCorrect6 = HSList.IndexOf(person6);
+            Assert.AreEqual(3, indexCorrect6);
         }
     }
 }

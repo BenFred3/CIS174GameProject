@@ -55,6 +55,8 @@ namespace CIS174GameProject.Shared.Orchestrators
 
             var SortedList = highscores.OrderBy(x => x.Score).ToList();
 
+            SortedList.Reverse();
+
             var firstElement = SortedList.First();
             SortedList.RemoveAt(0);
             var secondElement = SortedList.First();
@@ -105,6 +107,20 @@ namespace CIS174GameProject.Shared.Orchestrators
             await _projectContext.SaveChangesAsync();
 
             return "Succesfully Updated.";
+        }
+
+        public async Task<HighScore> GetHighscore(Guid personId)
+        {
+            var highscore = await _projectContext.Highscores.FindAsync(personId);
+
+            if (highscore == null)
+            {
+                return new HighScore() { HighscoreId = Guid.Empty, PersonId = personId, Score = 0m, DateAttained = DateTime.Now };
+            }
+            else
+            {
+                return highscore;
+            }
         }
     }
 }

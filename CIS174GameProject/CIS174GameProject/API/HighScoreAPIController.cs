@@ -85,5 +85,19 @@ namespace CIS174GameProject.API
                 return await CreateHighscore(personID, newHighscore);
             }
         }
+
+        public async Task<HighScoreViewModel> GetHighscore(Guid personId)
+        {
+            var highscore = await _highScoreOrchestrator.GetHighscore(personId);
+
+            var highscoreModel = new HighScoreViewModel
+            {
+                PersonId = highscore.PersonId,
+                Score = highscore.Score,
+                DateAttained = DateTime.Now
+            };
+
+            return highscoreModel;
+        }
     }
 }
