@@ -22,7 +22,9 @@ namespace CIS174GameProject.Shared.Orchestrators
         {
             var highscores = _projectContext.Highscores.Select(x => new HighScoreViewModel
             {
+                HighscoreId = x.HighscoreId,
                 PersonId = x.PersonId,
+                Email = x.Email,
                 Score = x.Score,
                 DateAttained = x.DateAttained
             }).ToList();
@@ -34,7 +36,9 @@ namespace CIS174GameProject.Shared.Orchestrators
         {
             var highscores = _projectContext.Highscores.Select(x => new HighScoreViewModel
             {
+                HighscoreId = x.HighscoreId,
                 PersonId = x.PersonId,
+                Email = x.Email,
                 Score = x.Score,
                 DateAttained = x.DateAttained
             }).ToList();
@@ -44,11 +48,13 @@ namespace CIS174GameProject.Shared.Orchestrators
             return SortedList;
         }
 
-        public List<HighScoreViewModel> GetTopFiveHighscores()
+        public List<HighScoreViewModel> GetTopTenHighscores()
         {
             var highscores = _projectContext.Highscores.Select(x => new HighScoreViewModel
             {
+                HighscoreId = x.HighscoreId,
                 PersonId = x.PersonId,
+                Email = x.Email,
                 Score = x.Score,
                 DateAttained = x.DateAttained
             }).ToList();
@@ -57,20 +63,17 @@ namespace CIS174GameProject.Shared.Orchestrators
 
             SortedList.Reverse();
 
-            var firstElement = SortedList.First();
-            SortedList.RemoveAt(0);
-            var secondElement = SortedList.First();
-            SortedList.RemoveAt(0);
-            var thirdElement = SortedList.First();
-            SortedList.RemoveAt(0);
-            var fourthElement = SortedList.First();
-            SortedList.RemoveAt(0);
-            var fifthElement = SortedList.First();
+            var listAmount = SortedList.Count;
+            var TopTenList = new List<HighScoreViewModel>();
+
+            for (var i = 0; i < listAmount; i++)
+            {
+                TopTenList.Insert(i, SortedList.First());
+                SortedList.RemoveAt(0);
+            }
             SortedList.Clear();
 
-            var TopFiveList = new List<HighScoreViewModel> { firstElement, secondElement, thirdElement, fourthElement, fifthElement };
-
-            return TopFiveList;
+            return TopTenList;
         }
 
         public async Task<int> CreateHighscore(HighScoreViewModel newHighscore)
@@ -79,6 +82,7 @@ namespace CIS174GameProject.Shared.Orchestrators
             {
                 HighscoreId = Guid.NewGuid(),
                 PersonId = newHighscore.PersonId,
+                Email = newHighscore.Email,
                 Score = newHighscore.Score,
                 DateAttained = newHighscore.DateAttained
             });
@@ -88,7 +92,9 @@ namespace CIS174GameProject.Shared.Orchestrators
 
         public async Task<string> UpdateHighscore(HighScoreViewModel newHighscore)
         {
-            var updateHighscore = await _projectContext.Highscores.FindAsync(newHighscore.PersonId);
+            var highscores = _projectContext.Highscores.ToList();
+
+            var updateHighscore = await _projectContext.Highscores.FindAsync(newHighscore.HighscoreId);
 
             if (updateHighscore == null)
             {
@@ -99,9 +105,13 @@ namespace CIS174GameProject.Shared.Orchestrators
             {
                 return "Score was too low. Cannot replace highscore.";
             }
+            if(updateHighscore.Score == newHighscore.Score)
+            {
+                return "The score is the same.";
+            }
 
-            updateHighscore.HighscoreId = Guid.NewGuid();
             updateHighscore.Score = newHighscore.Score;
+            updateHighscore.Email = newHighscore.Email;
             updateHighscore.DateAttained = newHighscore.DateAttained;
 
             await _projectContext.SaveChangesAsync();
@@ -115,7 +125,7 @@ namespace CIS174GameProject.Shared.Orchestrators
 
             if (highscore == null)
             {
-                return new HighScore() { HighscoreId = Guid.Empty, PersonId = personId, Score = 0m, DateAttained = DateTime.Now };
+                return new HighScore() { HighscoreId = Guid.Empty, PersonId = personId, Email = "Default@Email.com", Score = 0m, DateAttained = DateTime.Now };
             }
             else
             {

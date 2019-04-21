@@ -128,3 +128,5 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.xml
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Common.WebHost.xml
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.Mvc.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.WebApi.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject\bin\Ninject.Web.WebApi.xml

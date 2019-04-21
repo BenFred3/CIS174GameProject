@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="ProjectContext-Web.config Connection String" description="ProjectContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:benjamin-frederickson.database.windows.net,1433;Initial Catalog=CIS174Spring2019;          Persist Security Info=False;User ID=bfrederickson;Password=dmaccCis174;MultipleActiveResultSets=False;Encrypt=True;          TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+  <parameter name="ProjectContext-Web.config Connection String" description="ProjectContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:benfred-cis.database.windows.net,1433;Initial Catalog=CIS174Spring2019Datbase;&#xD;&#xA;         Persist Security Info=False;User ID=benfred;Password=Mamame10;MultipleActiveResultSets=False;Encrypt=True;&#xD;&#xA;         TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="B:\\Ben\\School\\AdvC\#\\ACTUAL\ CIS174GameProject\\CIS174GameProject\\CIS174GameProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProjectContext']/@connectionString" />
   </parameter>
 </parameters>

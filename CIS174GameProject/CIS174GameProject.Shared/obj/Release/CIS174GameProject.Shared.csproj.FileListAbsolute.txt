@@ -15,3 +15,5 @@ B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\obj\Release\CIS174GameProject.Shared.pdb
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\Ninject.dll
 B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\Ninject.xml
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\Microsoft.Web.Infrastructure.dll
+B:\Ben\School\AdvC#\ACTUAL CIS174GameProject\CIS174GameProject\CIS174GameProject.Shared\bin\Release\WebActivatorEx.dll

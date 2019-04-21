@@ -59,6 +59,7 @@ namespace CIS174GameProject.Domain.Migrations
             {
                 HighscoreId = Guid.Parse("ebeaa736-2a57-4112-92a6-9cab67845010"),
                 PersonId = Guid.Parse("52fc5dd8-c147-4fbc-82e6-465fd09b01a3"),
+                Email = "Default@Email.com",
                 Score = 1000,
                 DateAttained = DateTime.Now
             });
@@ -67,6 +68,7 @@ namespace CIS174GameProject.Domain.Migrations
             {
                 HighscoreId = Guid.Parse("71a62a7d-68c7-4963-a3d4-491af3e2f63c"),
                 PersonId = Guid.Parse("2dfafb6c-6ce3-44e2-b41d-6bffcad912a9"),
+                Email = "Default@Email.com",
                 Score = 500,
                 DateAttained = DateTime.Now
             });
@@ -75,6 +77,7 @@ namespace CIS174GameProject.Domain.Migrations
             {
                 HighscoreId = Guid.Parse("85837194-aab8-4866-8189-ccf6d001781d"),
                 PersonId = Guid.Parse("218d38cd-ecfc-43dd-b844-934f701af254"),
+                Email = "Default@Email.com",
                 Score = 200,
                 DateAttained = DateTime.Now
             });

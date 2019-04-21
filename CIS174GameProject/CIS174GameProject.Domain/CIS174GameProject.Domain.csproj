@@ -61,9 +61,9 @@
     <Compile Include="Entities\Error.cs" />
     <Compile Include="Entities\HighScore.cs" />
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="Migrations\201904020146493_Redo-Database-Creation.cs" />
-    <Compile Include="Migrations\201904020146493_Redo-Database-Creation.Designer.cs">
-      <DependentUpon>201904020146493_Redo-Database-Creation.cs</DependentUpon>
+    <Compile Include="Migrations\201904202108171_InitialDatabaseCreation.cs" />
+    <Compile Include="Migrations\201904202108171_InitialDatabaseCreation.Designer.cs">
+      <DependentUpon>201904202108171_InitialDatabaseCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProjectContext.cs" />
@@ -74,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904020146493_Redo-Database-Creation.resx">
-      <DependentUpon>201904020146493_Redo-Database-Creation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904202108171_InitialDatabaseCreation.resx">
+      <DependentUpon>201904202108171_InitialDatabaseCreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

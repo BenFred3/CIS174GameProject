@@ -10,6 +10,8 @@ namespace CIS174GameProject.Domain.Entities
 
         public Guid PersonId { get; set; }
 
+        public string Email { get; set; }
+
         public decimal Score { get; set; }
 
         public DateTime? DateAttained { get; set; }

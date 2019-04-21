@@ -10,7 +10,7 @@ namespace CIS174GameProject.Shared.Orchestrators.Interfaces
     {
         List<HighScoreViewModel> GetAllHighscores();
         List<HighScoreViewModel> GetHighscoresSorted();
-        List<HighScoreViewModel> GetTopFiveHighscores();
+        List<HighScoreViewModel> GetTopTenHighscores();
         Task<int> CreateHighscore(HighScoreViewModel newHighscore);
         Task<string> UpdateHighscore(HighScoreViewModel newHighscore);
         Task<HighScore> GetHighscore(Guid personId);
