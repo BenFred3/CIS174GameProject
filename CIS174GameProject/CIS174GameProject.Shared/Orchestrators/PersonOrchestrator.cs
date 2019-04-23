@@ -52,6 +52,29 @@ namespace CIS174GameProject.Shared.Orchestrators
             return people;
         }
 
+        public async Task<List<string>> GetAllEmails()
+        {
+            var people = await _projectContext.People.Select(x => new PersonViewModel
+            {
+                PersonId = x.PersonId,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Gender = (GenderEnum)x.Gender,
+                DateCreated = x.DateCreated,
+                Email = x.Email,
+                PhoneNumber = x.PhoneNumber
+            }).ToListAsync();
+
+            
+            List<string> emails = new List<string>();
+            for (int i = 0; i < people.Count; i++)
+            {
+                emails.Add(people[i].Email);
+            }
+
+            return emails;
+        }
+
         public async Task<bool> UpdatePerson(PersonViewModel person)
         {
             var updateEntity = await _projectContext.People.FindAsync(person.PersonId);

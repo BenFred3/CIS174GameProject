@@ -19,11 +19,11 @@ namespace CIS174GameProject.API
 
         [HttpGet]
         [Route("api/v1/people/get")]
-        public Task<List<PersonViewModel>> GetAllPeople()
+        public async Task<List<string>> GetAllEmails()
         {
-            var people = _personOrchestrator.GetAllPeople();
+            var emails = await _personOrchestrator.GetAllEmails();
 
-            return people;
+            return emails;
         }
     }
 }

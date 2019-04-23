@@ -62,11 +62,10 @@ namespace CIS174GameProject.Shared.Orchestrators
             var SortedList = highscores.OrderBy(x => x.Score).ToList();
 
             SortedList.Reverse();
-
-            var listAmount = SortedList.Count;
+            
             var TopTenList = new List<HighScoreViewModel>();
 
-            for (var i = 0; i < listAmount; i++)
+            for (var i = 0; i < 10; i++)
             {
                 TopTenList.Insert(i, SortedList.First());
                 SortedList.RemoveAt(0);

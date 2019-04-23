@@ -11,6 +11,7 @@ namespace CIS174GameProject.Shared.Orchestrators.Interfaces
     {
         Task<int> CreatePerson(PersonViewModel person);
         Task<List<PersonViewModel>> GetAllPeople();
+        Task<List<string>> GetAllEmails();
         Task<bool> UpdatePerson(PersonViewModel person);
         Task<PersonViewModel> SearchPeople(Guid searchGuid);
     }
